@@ -1,0 +1,34 @@
+\section*{Нелинейное уравнение движения 6 DOF лодки:}
+
+\begin{equation*}
+    M \Dot{{\nu}} + C({\nu}){\nu} + D({\nu}){\nu} + g({\eta}) = \tau
+\end{equation*}
+
+М --- матрица инерции + added mass; \\
+
+${C({\nu})}$ --- матрица кориолисовых и центростремительных сил ( + added mass) ; \\
+
+${D({\nu})}$ --- матрица демпфирования ; \\
+
+${g({\eta})}$ --- вектор гравитационных сил / моментов; \\
+
+${ \tau}$ --- управление (движетели) 
+
+
+\section*{Итоговое уравнение:}
+
+\begin{equation*}
+    M \Dot{{\nu}} + C({\nu}){\nu} + D({\nu}){\nu} + g({\eta}) = \tau_{env} + \tau
+\end{equation*}
+
+${M = M_{RB} + M_A}$ --- матрица инерции + added mass; \\
+
+${C({\nu}) = C_{RB}({\nu}) + C_A({\nu})      }$ --- матрица кориолисовых и центростремительных сил + added mass ; \\
+
+${D({\nu}) = D_p \textit{(potential damping)} + D_s \textit{(skinfriction)} + D_w \textit{(wafe drift damping)} + D_M \textit{(damping vortex shedding)}      }$; \\
+
+${g({\eta})}$ --- сила тяжесть + сила Архимеда; \\
+
+${ \tau_{env}}$ --- силы / моменты environment (течение, ветер, волны); \\
+
+${ \tau}$ --- силы / моменты движетелй

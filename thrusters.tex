@@ -1,0 +1,78 @@
+\newpage
+\section*{Rudderless double thrusters:}
+
+Модель сдовенных движетелей без руля \\
+
+\begin{equation*}
+    \tau_{tr} = \begin{bmatrix} \tau_{tr.u} & 0 & \tau_{tr.r}  \end{bmatrix}^T
+\end{equation*}
+
+\begin{equation*}
+    \tau_{tr..u} = T_{r1} + T_{r2}
+\end{equation*}
+
+\begin{equation*}
+    \tau_{tr.r} = (T_{r1} - T_{r2})*d_{TR}
+\end{equation*}
+
+\noindent{\rule{4cm}{0.4pt}}
+
+\begin{equation}\label{1}
+    T_r = (1 - t_p)\rho D^4K_T(J_0)n*|n|  
+\end{equation}
+
+${\rho}$ --- плотность воды; \\
+
+D --- диаметр винта движетеля; \\
+
+n --- обороты винта ; \\
+
+${t_p}$ --- коэффициент снижения тяги; \\
+
+${K_T}$ --- коэффициент тяги, зависящий от передаточного числа ${J_0}$
+
+\noindent{\rule{4cm}{0.4pt}}
+
+\begin{equation}\label{2}
+    J_0 = \frac{V(1 - \omega_p)}{nD}; V = \sqrt{u^2 + v^2} - \textit{скорость лодки } 
+\end{equation}
+
+${\omega_p}$ --- коэффициент попутного потока гребного винта (сложно!) \\
+
+\begin{equation}\label{3}
+    K_T = \alpha_1 + \alpha_2J_0,  \alpha_{1, 2} -  \textit {const} 
+\end{equation}
+коэффициент моделируется как линейная функция \\
+
+\noindent{\rule{4cm}{0.4pt}}
+
+Из (\ref{1}--\ref{3}) => 
+\begin{eqnarray*}
+    T_r = cVn + dn*|n|, \textit{где } \\
+    c = (1-t_p)(1-\omega)\rho D^^3 \alpha_2; \\
+    d = (1-t_p)\rho D^3 \alpha_2 \textit{=>} \\
+    \textit{c, d - идентифицируют в экспериментах}
+\end{eqnarray*}
+
+
+\section*{Added mass:}
+
+\begin{eqnarray*}
+    M = M_{body} + M_A - \textit{матрица масс}; \\
+    C(\nu) = C_{body}(\nu) + C_A(\nu) - \textit{матрица Кориолиса}
+\end{eqnarray*}
+
+Матрицы ${M_A, C_A}$ подобны матрицам ${M_{body}, C_{body}}$: \\
+\begin{equation*}
+    M_A = - \begin{bmatrix}  
+                X_{\Dot{u}} & 0 & 0 \\
+                0 & Y_{\Dot{v}} & 0 \\
+                0 & 0 & N_{\Dot{r}}
+            \end{bmatrix}; 
+            \;
+        C_A(\nu) = - \begin{bmatrix}
+                    0 & 0 & -Y_{\Dot{v}}V \\
+                    0 & 0 & X_{\Dot{u}}U \\
+                    Y_{\Dot{v}}V & -X_{\Dot{u}}U & 0
+                \end{bmatrix}
+\end{equation*}
