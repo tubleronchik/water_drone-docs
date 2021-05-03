@@ -18,7 +18,7 @@
 \noindent{\rule{4cm}{0.4pt}}
 
 \begin{equation}\label{1}
-    T_r = (1 - t_p)\rho D^4K_T(J_0)n*|n|  
+    T = (1 - t_p)\rho D^4K_T(J_0)n\cdot|n|  
 \end{equation}
 
 ${\rho}$ --- плотность воды; \\
@@ -59,7 +59,7 @@ ${\omega_p}$ --- коэффициент попутного потока греб
 
 \begin{eqnarray*}
     M = M_{body} + M_A - \textit{матрица масс}; \\
-    C(\nu) = C_{body}(\nu) + C_A(\nu) - \textit{матрица Кориолиса}
+    C(\upsilon) = C_{body}(\upsilon) + C_A(\upsilon) - \textit{матрица Кориолиса}
 \end{eqnarray*}
 
 Матрицы ${M_A, C_A}$ подобны матрицам ${M_{body}, C_{body}}$: \\
@@ -74,5 +74,19 @@ ${\omega_p}$ --- коэффициент попутного потока греб
                     0 & 0 & -Y_{\Dot{v}}V \\
                     0 & 0 & X_{\Dot{u}}U \\
                     Y_{\Dot{v}}V & -X_{\Dot{u}}U & 0
+                \end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+    M = \begin{bmatrix}  
+                m-X_{\Dot{u}} & 0 & 0 \\
+                0 & m-Y_{\Dot{v}} & 0 \\
+                0 & 0 & I_{zz}-N_{\Dot{r}}
+            \end{bmatrix}; 
+            \;
+        C(\upsilon) = \begin{bmatrix}
+                    0 & 0 & -(m-Y_{\Dot{v}})v \\
+                    0 & 0 & (m-X_{\Dot{u}})u \\
+                    (m-Y_{\Dot{v}})v & -(m-X_{\Dot{u}})u & 0
                 \end{bmatrix}
 \end{equation*}

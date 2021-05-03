@@ -51,8 +51,8 @@ sin\psi & cos\psi & 0 \\
 \large
 \begin{equation*}
  \begin{cases}
-   \frac{d}{dt}(\frac{\partial T}{\partial \nu_1}) + S(\nu_2)\frac{\partial T}{\partial \nu_1} = \tau_1\\
-   \frac{d}{dt}(\frac{\partial T}{\partial \nu_2}) + S(\nu_2)\frac{\partial T}{\partial \nu_2} + S(\nu_1)\frac{\partial T}{\partial \nu_1} = \tau_2
+   \frac{d}{dt}(\frac{\partial T}{\partial \upsilon_1}) + S(\nu_2)\frac{\partial T}{\partial \upsilon_1} = \tau_1\\
+   \frac{d}{dt}(\frac{\partial T}{\partial \upsilon_2}) + S(\upsilon_2)\frac{\partial T}{\partial \upsilon_2} + S(\upsilon_1)\frac{\partial T}{\partial \upsilon_1} = \tau_2
  \end{cases}
  \end{equation*}
  
@@ -110,11 +110,11 @@ I_{zz}\Dot{r}
 X \\
 Y \\
 N
-\end{bmatrix} => M\Dot{\nu} + C(\nu)\nu = \tau
+\end{bmatrix} => M\Dot{\upsilon} + C(\upsilon)\upsilon = \tau
 \end{equation*}
 
 \begin{equation*}
-C(\nu) = \begin{bmatrix}
+C(\upsilon) = \begin{bmatrix}
 0 & 0 & -mv \\
 0 & 0 & mu \\
 mv & -mu & 0 
@@ -123,5 +123,12 @@ X \\
 Y \\
 N
 \end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+ \begin{cases}
+   \Dot{\eta} = J(\eta)\upsilon\\
+    M\Dot{\upsilon} + C(\upsilon)\upsilon + D\upsilon = \tau
+ \end{cases}
 \end{equation*}
 
