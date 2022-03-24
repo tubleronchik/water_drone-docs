@@ -28,7 +28,7 @@ jobs:
         run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super texlive-lang-cyrillic
       - name: LaTeX compile
         working-directory: ${{ env.DIR }}
-        run: latexmk -pdf -bibtex ${{ env.FILE }}
+        run: latexmk -pdf -bibtex -interaction=nonstopmode ${{ env.FILE }}
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
